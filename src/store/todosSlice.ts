@@ -30,7 +30,7 @@ const todosSlice = createSlice({
         },
 
         removeTodo: (state, action: PayloadAction<number>) => {
-            state.todoItems.filter(todo => todo.id !== action.payload)
+            state.todoItems = state.todoItems.filter(todo => todo.id !== action.payload)
         }
     }
 })

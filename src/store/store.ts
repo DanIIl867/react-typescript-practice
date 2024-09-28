@@ -1,10 +1,13 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { todosReducers } from "./todosSlice";
 
-const reducers = combineReducers({
-    todos: todosReducers
-})
+// const reducers = combineReducers({
+//     todos: todosReducers
+// })
 
 export const store = configureStore({
-    reducer: reducers
+    reducer: todosReducers
 })
+
+export type RootState = ReturnType<typeof store.getState>
+
